@@ -1,0 +1,195 @@
+)O+_06 Integration parameters  (WARNING: Do not delete this line!!)
+) Lines beginning with `)' are ignored.
+) Notes: 1-) vertices must be in same unit distance (AU) of the integration! 2-) densities too!
+)
+) Authors: Andre Amarante       (A. Amarante)     - a.amarante.br@gmail.com
+)          John E. Chambers     (J. E. Chambers)  - chambers@agamemnon.ciw.edu
+) Collaborators:
+)          Karla Torres         (K. S. Torres)    - karlchen79@gmail.com
+)          Andre Izidoro        (A. Izidoro)      - izidoro.costa@gmail.com
+)          Rafael Sfair         (R. Sfair)        - rsfair@gmail.com
+)          Daniela Mourao       (D. C. Mourao)    - daniela.mourao@unesp.br
+)          Ernesto Vieira Neto  (E. V. Neto)      - ernesto.vieira@unesp.br
+)          Othon Cabo Winter    (O. C. Winter)    - ocwinter@gmail.com
+)          Douglas P. Hamilton  (D. P. Hamilton)  - dphamil@astro.umd.edu
+)
+) Last modification: 06/02/2020
+)---------------------------------------------------------------------
+) Important integration parameters:
+)---------------------------------------------------------------------
+ algorithm (MVS, BS, BS2, RAD, HYB, HYBRAD, CLO, WID, SABP, POL, MAS, AST, ASTMVS, ASTRAD etc) = MAS
+ start time (s)= 0
+ stop time (s) =36000
+ output interval (s) = 36
+ dump interval (s) = 36
+ timestep (s) = 701.4913134907
+ accuracy parameter=1.d-12
+ use forced stepsize (HVAR) = no
+ rotate asteroid (integrate on inertial frame) = no
+ use cubic mascons = yes
+)---------------------------------------------------------------------
+) Integration options:
+)---------------------------------------------------------------------
+ stop integration after a close encounter, collision or ejection = no
+ range of index of bodies that save close encounters = none
+ use system length unit for close encounters = no
+ use close encounters as collisions (Prune collisions) = no
+ range of index of bodies that experience close encounters as collisions = sml
+ use close encounters as ejections (Prune ejections) = no
+ range of index of bodies that experience close encounters as ejections = big
+ stop integration by the number of bodies = no
+ how many bodies in the system (except the central body) = 2
+ stop integration by accretion of mass of a body = no
+ maximum mass limit (kg) = 3.227156E-07
+ range of index of bodies that don't experience the maximum mass limit = none
+ stop integration by decreasing mass of the system = no
+ minimum mass limit (kg) = 3.003490E-06
+ range of index of bodies that don't experience the minimum mass limit = 1 - 3
+ additional stop time (s) = 0.0000000
+)---------------------------------------------------------------------
+) Start to save close encounters, collisions and ejections after a criteria
+ time criteria = no
+ time (s) = 365.25
+ body mass criteria = no
+ maximum body mass (kg) = 3.227156E-07
+ range of index of bodies that don't experience the maximum body mass = 1 - 1
+ system mass criteria = no
+ mininum system mass (kg) = 3.003490E-06
+ range of index of bodies that don't experience the minimum system mass = none
+ number of bodies criteria = no
+ minimum number of bodies (except central body) = 2
+)---------------------------------------------------------------------
+ allow collisions to occur = no
+ include collisional fragmentation = no
+ allow collisions with central body to occur = yes
+ express time in seconds = days
+ express time relative to integration start time = yes
+ output precision = high
+ use chaotic region as a ejection region of system (only coorbitals systems) = no
+ include relativity in integration= no
+ include user-defined force = no
+)---------------------------------------------------------------------
+) Solar Radiation Pressure (SRP) and Poynting–Robertson drag (P-R)
+ obliquity of central body (degrees) (SRP-PR) = 177.6
+ sun mean motion (degrees/s) (SRP-PR) = 9.50642634420868E-06
+ sun mass (kg) = 1.9891E+30
+ speed of light (km/s) = 299792.197442722
+ range of index of bodies that don't experience SRP-PR = none
+ cylindrical shadow radius (km) (0 to use radius of central body and negative to turn off) = -0.29
+)---------------------------------------------------------------------
+ use Chariklo's problem (Chariklo must be body index 2) = no
+ delta radius (km) = 0.1
+ close encounter output interval (s) = 0.001
+ close encounter stepsize (s) = 0.0001
+)---------------------------------------------------------------------
+) These parameters do not need to be adjusted often:
+)---------------------------------------------------------------------
+ collision's test limit with central body (km) = 250
+ maximum number to flush (file ce.out) = 100
+ minimum ejection distance (km)= 0
+ maximum ejection distance (km)= 1.0
+ range of index of bodies that don't experience ejections = 0 - 0
+ Prune ejection by a ring = no
+ index of the body that will be pruned by a ring (except central body) = 1
+ prune ring width (Hill radii) = 3.
+ Prune ejection by a sphere = no
+ range of index of bodies that experience prune ejections by a sphere = big
+ use system length unit instead Hill radii for prune ejection ring/sphere = no
+ central name = BENNU
+ radius of central body (km) = 0.21
+ central mass (kg) = 7.329E+10
+ central J2 = 0
+ central J4 = 0
+ central J6 = 0
+) coordinates of central body (for barycentric and synodic coordinates):
+ Cartesian Bb Inertial
+  0. 0. 0.
+  0. 0. 0.
+) Asteroidal BENNU Inertial
+)  168507040.768 0.20375 6.0349
+)  66.2231       2.0609  101.7039
+ type of elements of the big and small bodies (ce, ba, Ja, sy, clo, wid, uclo, sabp, usabp, geo) = Cen
+ average mean motion n (degrees/years) for synodic coordinates = 360.0d0
+ Hybrid integrator changeover (Hill radii) = 3.
+ number of timesteps between periodic effects = 100
+)---------------------------------------------------------------------
+) Polyhedron's options
+)---------------------------------------------------------------------
+ layers' densities (g/cm^3) List from most superficial to deepest = 1.19d0
+ rotation period (s) = 1.54658052d4
+ Polyhedron integrator changeover (newtonian potential) (km) = 100
+ Polyhedron integrator changeover (mascons) (km) = 0.29
+ Hybrid Polyhedron integrator changeover (km) = 400
+ a (km)= 0.29
+ b (km)= 0.29
+ c (km)= 0.29
+ use point inside a polyhedron = yes
+ factor = 1.0
+ use high accuracy for polyhedron method = no
+ use Laplacian central body collision criteria (only for POL and AST algorithms) = no
+)---------------------------------------------------------------------
+ use potential from binary file (for cubic mascons method too) = yes
+ x-size (km) (for cubic mascons method too) = 1.2d-2
+ y-size (km) (for cubic mascons method too) = 1.2d-2
+ z-size (km) (for cubic mascons method too) = 1.2d-2
+)---------------------------------------------------------------------
+) Path of the potential input files (for cubic mascons method too)
+ ./in/
+)---------------------------------------------------------------------
+ List the potential input files = cube.in
+)---------------------------------------------------------------------
+ initial grid point x (km) = -399.5
+ final grid point x (km) = 399.5
+ initial grid point y (km) = -399.5
+ final grid point y (km) = 399.5
+ initial grid point z (km) = -399.5
+ final grid point z (km) = 399.5
+)---------------------------------------------------------------------
+ Gaussian gravitational constant squared K2 (km^3/kg/s^2) = 6.67428d-20
+ Distance unit (cm) = 1.0e5
+ Mass unit (g) = 1.0e3
+)---------------------------------------------------------------------
+) P. S. S. and L. C. E. options
+)---------------------------------------------------------------------
+ Poincare Surface Section (P.S.S.) = no
+ range of index of bodies that don't make P.S.S = none
+ Lyapunov Characteristic Exponent (L.C.E.) = no
+ range of index of bodies that don't make L.C.E = none
+ initial x/vx displacement (L.C.E.) = 1.d-8
+ initial y/vy displacement (L.C.E.) = 1.d-8
+ initial z/vz displacement (L.C.E.) = 0.d0
+ Renormalisation interval (L.C.E.) (s) = 3600
+ use initial Jacobi Constant instead = no
+ Initial Jacobi Constant value = -2.5d-8
+ which coordinate do you want to use (u,v,w) = v
+ which sign of coordinate do you want to use (+/-) = +
+ Equation of cross plane (ax+by+cz+d=0) = 1.0 0.0 0.0 0.0
+ accuracy of method =1.d-12
+ maximum number of iterations of method = 100
+ Jacobi Constant accuracy = 0
+)---------------------------------------------------------------------
+) Start to shrink/increase masses, rotation period, etc.. after a criteria
+ time criteria (1) = no
+ range of time (s) = 365.25 3652.5
+ body mass criteria (2) = no
+ range of maximum body mass (kg) = 3.227156E-07 3.227156E-06
+ range of index of bodies that don't experience the maximum body mass = 1 - 1
+ system mass criteria (3) = no
+ range of mininum system mass (kg) = 3.003490E-06 3.003490E-07
+ range of index of bodies that don't experience the minimum system mass = none
+ number of bodies criteria (4) = no
+ range of minimum number of bodies (except central body) = 10 5
+ stop integration after a criteria (first criteria that will be done) = no
+)---------------------------------------------------------------------
+ shrink/increase masses = no
+ exponential parameter = -1.0d0
+ use final mass instead (0 to use exponential parameter) = 3.003490E-07
+ range of index of bodies that experience it (central body included) = cen
+ criteria (1=time/2=bodymass/3=systemmass/4=numberbodies) = 1
+ use conservation of mass = no
+ range of index of bodies that deliver lost mass (central body included) = big
+ shrink/increase rotation period = no
+ exponential parameter = 1.0d0
+ use final rotation period instead (0 to use exponential parameter) = 18000.0d0
+ criteria (1=time/2=bodymass/3=systemmass/4=numberbodies) = 1
+ use conservation of angular momentum = no

@@ -1,0 +1,35 @@
+)O+_06 close  (WARNING: Do not delete this line!!)
+) Lines beginning with `)' are ignored.
+)
+) Authors: Andre Amarante       (A. Amarante)     - a.amarante.br@gmail.com
+)          John E. Chambers     (J. E. Chambers)  - chambers@agamemnon.ciw.edu
+)
+) Last modification: 06/02/2020
+)---------------------------------------------------------------------
+ number of input files = 1
+)---------------------------------------------------------------------
+) List the input files, one per line
+ ce.out
+)---------------------------------------------------------------------
+ type of elements (central body, barycentric, Jacobi, synodic, clo, wid, uclo, sabp, usabp, star, ast, coorb, geo) = ast
+ do you just want to list? = no
+ type of decompression (close encounter -> ce, collision -> co, ejection -> ej, collision with the central body -> cb, prune collision -> pc, prune ejection -> pe, poincare surface section -> ps) = cb
+ use geometric elements third order correction = no
+ range of index of bodies to apply geometric elements (except the central body. Be careful! No Reindex) = all
+ range of index of bodies to calculate center of mass (Central Body is already included. Be careful! No Reindex) = all
+ average mean motion n (degrees/years) for synodic coordinates = 360.0d0
+ central name = BENNU
+ initial output time (days) = 0
+ final output time (days) = 36000000
+ minimum interval between outputs (days) = 0.0000000
+ express time in days or years = days
+ express time relative to integration start time = yes
+ express time relative to initial output time = no
+)---------------------------------------------------------------------
+) Output format? (e.g. a8.4 => semi-major axis with 8 digits & 4 dec. places)
+) dce11.8 a8.5 e8.6 i8.4 g8.4 n8.4 l8.4 m13,6E 
+ dce11.5 x30.15e y30.15e z30.15e u30.15e v30.15e w30.15e
+)---------------------------------------------------------------------
+) Which bodies do you want? (List one per line or leave blank for all bodies)
+)
+ 

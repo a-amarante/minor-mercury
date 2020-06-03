@@ -1,0 +1,10 @@
+)O+_06 Small-body initial data  (WARNING: Do not delete this line!!)
+) Lines beginning with `)' are ignored.
+)---------------------------------------------------------------------
+ PARTICLE i = 2   ep=0  d= 1.19  b= 0.0
+ Asteroidal BENNU inertial
+ 0.35  0.0  0.0  0.0  0.0  0.0 0 0 0
+) EQ6      i = 3   ep=0  d= 1.19  b= 0.0
+) car BENNU Rotating
+)  3.358229053998095E-03 -3.149698844291791E-01 -1.189213665264900E-03  0.0  0.0  0.0  0.0  0.0  0.0
+

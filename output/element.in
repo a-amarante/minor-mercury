@@ -1,0 +1,47 @@
+)O+_06 element  (WARNING: Do not delete this line!!)
+) Lines beginning with `)' are ignored.
+)
+) Authors: Andre Amarante       (A. Amarante)     - a.amarante.br@gmail.com
+)          John E. Chambers     (J. E. Chambers)  - chambers@agamemnon.ciw.edu
+)
+) Last modification: 06/02/2020
+)---------------------------------------------------------------------
+ number of input files = 1
+)---------------------------------------------------------------------
+) List the input files, one per line
+ xv.out
+)---------------------------------------------------------------------
+ type of elements (central body, barycentric, Jacobi, synodic, clo, wid, uclo, sabp, usabp, star, ast, coorb, geo) = ast
+ use geometric elements third order correction = no
+ range of index of bodies to apply geometric elements (except the central body. Be careful! No Reindex) = all
+ range of index of bodies to calculate center of mass (Central Body is already included. Be careful! No Reindex) = all
+ average mean motion n (degrees/years) for synodic coordinates = 360.0d0
+ central name = BENNU
+ initial output time (days) = 0
+ final output time (days) = 36000000
+ minimum interval between outputs (days) = 3.6d2
+ express time in days or years = days
+ express time relative to integration start time = yes
+ express time relative to initial output time = no
+ do you want to list all surviving bodies in the same output time interval? = no
+ filenames with output time interval format? = no
+ name of state files = state.dat
+ initial index of state files (-1 negative to default) = -1
+ include center of mass of system? = no
+ center of mass body name = PL0
+)---------------------------------------------------------------------
+) Output format? (e.g. a8.4 => semi-major axis with 8 digits & 4 dec. places)
+) a8.5 e8.6 i8.4 g8.4 n8.4 l8.4 m13,6E 
+ x30.15e y30.15e z30.15e u30.15e v30.15e w30.15e
+)---------------------------------------------------------------------
+) Sort Output format? (e.g. a => semi-major axis)
+  
+)---------------------------------------------------------------------
+) Which bodies DON'T you want to list in the same output time interval?
+) (List one per line or leave blank for TO LIST all bodies)
+
+
+
+)---------------------------------------------------------------------
+) Which bodies do you want? (List one per line or leave blank for all bodies)
+)

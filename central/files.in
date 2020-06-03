@@ -1,0 +1,15 @@
+ big.in
+ small.in
+ param.in
+ ./in/vertex.in
+ ./in/face.in
+ ./in/message.in
+ ./out/xv.out
+ ./out/ce.out
+ info.out
+ infocpu.out
+ ./dmp/big.dmp
+ ./dmp/small.dmp
+ ./dmp/param.dmp
+ ./dmp/restart.dmp
+ ./dmp/chk.dmp
