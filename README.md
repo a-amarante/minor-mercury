@@ -3,11 +3,11 @@ Minor-Mercury Package
 A version to handle Asteroids and Comets.
 ---------------------------------
 
-``Minor-Mercury package`` is an N-body code which allows the user to performer N-body numerical integrations in the irregular gravity field around a minor body, such an Asteroid and a Comet. It is based on the [original Mercury code](http://www.arm.ac.uk/~jec/home.html) from Chambers (1999) and works in the same way. Note that minor bodies simulations only work with the ``Bulirsch-Stoer`` algorithm integrator of original Mercury (``mdt_bs1.for`` subroutine). If you don't know how original Mercury works, I invite you to download the original one and read ``mercury6.man``.
+``Minor-Mercury package`` is an N-body code which allows the user to performer N-body numerical integrations in the irregular gravitational field around a minor body, such an Asteroid and a Comet. It is based on the [original Mercury code](https://github.com/a-amarante/mercury) from Chambers (1999) and works in the same way. Note that minor bodies simulations only work with the ``Bulirsch-Stoer`` algorithm integrator of original Mercury (``mdt_bs1.for`` subroutine). If you don't know how original Mercury works, I invite you to download the original one and read ``mercury6.man``.
 
-The Minor-Mercury version can also work for either ``single stars`` (central), ``binary stars`` (close/wide) and ``triple stars`` (S(AB)-P) (see, e.g., Barbosa et al. (2020) and Amarante et al. (2020)). The ``Solar Radiation Pressure`` (Mignard, 1984) can also take into account over numerical integration time (subroutine ``mfo_pr.for``). This version uses a slightly different input/output formats from the original package. For example, the user can place the initial conditions of the bodies around any body of the system and not only around central one (the same for output data), for the inertial or the rotating reference frames, choosing asteroidal or cartesian styles for each body separately. The input/output ``Geometric Elements`` computational conversions (Renner and Sicardy, 2006) were also implemented in this version (subroutines ``geo_car.for`` and ``car_geo.for``). A full explanation of all inputs and outputs is given in ``mercury6.man``.
+The Minor-Mercury version can also work for either ``single stars`` (central), ``binary stars`` (close/wide) and ``triple stars`` (S(AB)-P) (see, e.g., Barbosa et al. (2020) and Amarante et al. (2020)). The ``Solar Radiation Pressure`` (Mignard, 1984) can also take into account over numerical integration time (subroutine ``mfo_pr.for``). This version uses a slightly different input/output formats from the original package. For example, the user can place the initial conditions of the bodies around any body of the system and not only around central one (same for output data), for the inertial or the rotating reference frames (same for output data), choosing asteroidal or cartesian coordinates styles for each body separately. The input/output ``Geometric Elements`` computational conversions (Renner and Sicardy, 2006) were also implemented in this version (subroutines ``geo_car.for`` and ``car_geo.for``). A full explanation of all inputs and outputs is given in ``mercury6.man``.
 
-N.B. I've implemented a modified version of the original POLYHEDRON code from D. Tsoulis into the Minor-Mercury package, that can compute the gravitational potential, and its first and second derivatives of a homogenous polyhedron, according to Petrovic (J of G, 1996). The main gravitational implementations are made in the subroutines ``mfo_all.for`` and ``mfo_grav.for`` through subroutine ``polyhedron.for``. Additionally, mascons approach was also implemented into this subroutine.
+N.B. I've implemented a modified version of the original POLYHEDRON code from D. Tsoulis into the Minor-Mercury package, that can compute the gravitational potential, and its first and second derivatives of a homogenous polyhedron, according to Petrovic (J of G, 1996). The main gravitational implementations were made in the subroutines ``mfo_all.for`` and ``mfo_grav.for`` through subroutine ``polyhedron.for``. Additionally, mascons approach was also implemented into this subroutine.
 
 Notable contents of this repository
 ---------------------------
@@ -83,7 +83,7 @@ Or use the ``Makefile:``
 
 Or use the executable files ``minor-mercury_gfort`` or ``minor-mercury_ifort`` for Linux and Mac OS X compilers ``gfortran`` or ``ifort``, respectively:
 
-   First type ``chmod +x minor-mercury_gfort`` and after that to run your code using ``./minor-mercury_gfort``.
+   First type ``chmod +x minor-mercury_gfort`` and after that run your code using ``./minor-mercury_gfort``.
 
 Tricks and Caveats
 ------------------
@@ -94,7 +94,7 @@ Disclaimers
 ------------
 
 * The minor version changes have only been tested with the ``MAS`` and ``POL`` algorithms to integrate particle orbits around the irregular gravity field of an asteroid. Use other integrators at your own risk.
-* I've fixed all the errors I've found.  If you find a bug, let me know so we can try to fix it.
+* I've fixed all the errors I've found, such as De Souza Torres & Anderson (2008) bug fix (see, e.g., [Mercury Adaptations](#mercury-adaptations)).  If you find a bug, let me know so we can try to fix it.
 * Any feedback is appreciated, especially bugs, suggestions, or possible contributions.
 * Are you going to publish? Please acknowledge the use of my code in any publication referencing:
 
@@ -102,3 +102,423 @@ Disclaimers
 
 * The source codes of this repository are available on reasonable request.
 
+Recent Publications
+-------------------
+
+The code was used in the following recent studies:
+
+* Amarante, A., Winter, O. C., Sfair, R. (2020), Stability and Evolution of Fallen Particles Around the Surface of Asteroid (101955) Bennu. JGR Planets.
+* G. O. Barbosa, O. C. Winter, A. Amarante, A. Izidoro, R. C. Domingos, E. E. N. Macau (2020), Earth-size planet formation in the habitable zone of circumbinary stars. MNRAS.
+* T. S. Moura, O. C. Winter, A. Amarante, R. Sfair, G. Borderes-Motta, G. Valvano (2019), Dynamical environment and surface characteristics of asteroid (16) Psyche. MNRAS.
+
+#Mercury Adaptations
+--------------------
+
+These are adaptations that I made into original Mercury code through the years (in Portuguese):
+
+c------------------------------------------------------------------------------
+c
+c 26/11/13
+c ##E1,n## Corrige o erro para adicionar parâmetros de forças
+c não-gravitacionais nos dados de entrada dos corpos nos arquivos big.in e
+c small.in.
+c
+c------------------------------------------------------------------------------
+c
+c 28/11/13
+c ##A1,n## Adiciona ao arquivo param.in a opção do limite de teste de colisão
+c com o corpo central.
+c
+c------------------------------------------------------------------------------
+c
+c 04/12/13
+c ##A2,n## Adiciona ao arquivo param.in a opção do número máximo de despejo no
+c arquivo ce.out.
+c
+c------------------------------------------------------------------------------
+c
+c 05/12/13
+c ##A3,n## Adiciona ao arquivo param.in a opção da distância mínima de ejeção.
+c
+c------------------------------------------------------------------------------
+c
+c 05/12/13
+c ##A4,n## Adiciona ao arquivo param.in a opção dos índices dos corpos que NÃO
+c serão ejetados do sistema.
+c
+c------------------------------------------------------------------------------
+c
+c 10/12/13
+c ##A5,n## Adiciona ao arquivo param.in a opção dos índices dos corpos que
+c serão salvos seus encontros próximos. Também escreve no arquivo ce.out os
+c dados referentes a colisões (inclusive com o corpo central) e ejeções do
+c sistema de forma com que o tamanho do arquivo ce.out seja minimizado (salva
+c somente os dados dos corpos envolvidos em situações de encontros próximos,
+c colisões e ejeções do sistema).
+c OBS-1: as coordenadas dos dados do arquivo de saída ce.out neste caso serão
+c sempre em relação ao corpo central.
+c OBS-2: faz a modificação para os integradores de passo variável (subrotina
+c mal_hvar).
+c
+c------------------------------------------------------------------------------
+c
+c 18/12/13
+c ##A6,n## Adiciona ao arquivo param.in a opção dos índices dos corpos que
+c serão salvos seus encontros próximos. Também escreve no arquivo ce.out os
+c dados referentes a colisões (inclusive com o corpo central) e ejeções do
+c sistema de forma com que o tamanho do arquivo ce.out seja minimizado (salva
+c somente os dados dos corpos envolvidos em situações de encontros próximos,
+c colisões e ejeções do sistema).
+c OBS-1: as coordenadas dos dados do arquivo de saída ce.out neste caso serão
+c sempre em relação ao corpo central.
+c OBS-2: faz a modificação para os integradores de passo fixo (subrotina
+c mal_hcon).
+c
+c------------------------------------------------------------------------------
+c
+c 23/12/13
+c ##E2,n## Corrige o erro da escrita dos dados de saída no arquivo ce.out
+c quando ocorrem encontros próximos seguidos de ejeções.
+c
+c------------------------------------------------------------------------------
+c
+c 28/12/13
+c ##E3,n## Corrige o erro do cálculo do instante de colisão de um corpo com o
+c corpo central quando a excentricidade do corpo é nula e quando o módulo do
+c cosseno da anomalia excêntrica do corpo é maior do que 1.
+c
+c------------------------------------------------------------------------------
+c
+c 07/01/14
+c ##E4,n## Corrige o erro da variável colflag NÃO ser inicializada em zero na
+c subrotina mdt_mvs.
+c
+c------------------------------------------------------------------------------
+c
+c 10/01/14
+c ##E5,n## Corrige o erro das massas dos corpos serem sempre colocadas como
+c nulas na subrotina mco_x2ov quando eles sofrem encontros próximos ou colisões.
+c
+c------------------------------------------------------------------------------
+c
+c 15/01/14
+c ##A7,n## Adiciona ao arquivo param.in a opção para usar a região caótica como
+c região de ejeção do sistema.
+c OBS: somente para sistemas coorbitais.
+c
+c------------------------------------------------------------------------------
+c
+c 22/02/14
+c ##A8,n## Adiciona ao arquivo param.in as opções de interrupção da
+c integração.
+c
+c------------------------------------------------------------------------------
+c
+c 25/02/14
+c ##A9,n## Faz com que a subrotina mio_log NÃO escreva na tela.
+c
+c------------------------------------------------------------------------------
+c
+c 25/02/14
+c ##E6,n## Corrige o erro do alerta e da interrupção da integração quando NÃO
+c existem corpos grandes no arquivo big.in.
+c
+c------------------------------------------------------------------------------
+c
+c 27/02/14
+c ##E7,n## Corrige o erro da escrita do número total inicial de corpos grandes
+c e pequenos no arquivo info.out para um número de corpos com mais de 4
+c algarismos.
+c
+c------------------------------------------------------------------------------
+c
+c 01/03/14
+c ##A10,n## Adiciona informações relevantes ao arquivo info.out.
+c
+c------------------------------------------------------------------------------
+c
+c 04/03/14
+c ##A11,n## Adiciona contadores para o número de corpos, colisões, ejeções e
+c colisões com o corpo central nas informações de colisões e ejeções no arquivo
+c info.out.
+c
+c------------------------------------------------------------------------------
+c
+c 10/03/14
+c ##E8,n## Corrige o erro para poder gerar arquivos de saída com nomes
+c diferentes (xv.out e ce.out) no arquivo files.in a cada reinício da
+c integração.
+c
+c------------------------------------------------------------------------------
+c
+c 15/03/14
+c ##A12,n## Escreve na tela algumas informações relevantes.
+c
+c------------------------------------------------------------------------------
+c
+c 23/03/14
+c ##A13,n## Faz com que os dados sejam gravados em uma única linha nos arquivos
+c de saída xv.out e ce.out.
+c
+c------------------------------------------------------------------------------
+c
+c 22/04/14
+c ##E9,n## Corrige o erro para o mercury rodar a 100% de CPU no cluster.
+c
+c------------------------------------------------------------------------------
+c
+c 15/05/14
+c ##A14,n## Corrige o erro do passo de integração da estrela binária quando o
+c integrador close-binary (CLO) é usado com apenas 2 corpos (as duas estrelas).
+c
+c------------------------------------------------------------------------------
+c
+c 18/07/14
+c ##AAR1,n## Implementa o integrador híbrido simplético para sistemas hierárquicos
+c triplos de estrelas com órbita do tipo S(AB)-P. As implementações foram
+c feitas por A. Amarante, A. Izidoro e R. C. Domingos.
+c Ref: [1] Planetary Stability Zones in Hierarchical Triple Star Systems - P. E.
+c Verrier and N. W. Evans, 2007.
+c      [2] Symplectic Integrator Algorithms for Modeling Planetary Accretion in
+c Binary Star Systems - John E. Chambers, Elisa V. Quintana, Martin J. Duncan,
+c and Jack J. Lissauer, 2002.
+c      [3] N-Body Integrators for Planets in Binary Star Systems - John E.
+c Chambers, 2007.
+c      [4] Symplectic integrators for solar system dynamics - Saha, P.;
+c Tremaine, S., 1992.
+c      [5] Long-term planetary integration with individual time steps - Saha,
+c Prasenjit; Tremaine, Scott, 1994.
+c
+c------------------------------------------------------------------------------
+c
+c 18/07/14
+c ##E10,n## Corrige o erro para escrever uma mensagem de alerta no arquivo
+c info.out quando o raio do corpo central rcen é muito pequeno.
+c
+c------------------------------------------------------------------------------
+c
+c 22/07/14
+c ##A15,n## Adiciona ao arquivo param.in novas opções para o tipo dos elementos.
+c
+c------------------------------------------------------------------------------
+c
+c 27/12/14
+c ##A16,n## Converte as coordenadas e velocidades de todos os corpos para um
+c corpo de referência. Adiciona aos arquivos big.in e small.in novas opções.
+c
+c------------------------------------------------------------------------------
+c
+c 13/01/15
+c ##A17,n## Adiciona ao arquivo param.in a opção para usar uma distância real
+c para os encontros próximos (NÃO em raios de Hill).
+c
+c------------------------------------------------------------------------------
+c
+c 22/01/15
+c ##A18,n## Adiciona ao arquivo param.in uma nova opção de coordenada definida
+c pelo usuário para sistemas hierárquicos triplos de estrelas com órbita do
+c tipo S(AB)-P.
+c
+c------------------------------------------------------------------------------
+c
+c 04/03/15
+c ##E11,n## Corrige o erro para as massas dos corpos ejetados não serem salvas
+c como nulas.
+c
+c------------------------------------------------------------------------------
+c
+c 06/03/16
+c ##A19,n## Implementa o integrador para um potencial central de um asteroide.
+c
+c------------------------------------------------------------------------------
+c
+c 28/04/16
+c ##A20,n## Print out elapsed time, integration time remaining and size of
+c Mercury outfiles.
+c
+c------------------------------------------------------------------------------
+c
+c 29/04/16
+c ##A21,n## Coloca os arquivos vertex.in, face.in e message.in em um diretório
+c diferente do principal.
+c
+c------------------------------------------------------------------------------
+c
+c 06/05/16
+c ##A22,n## Adiciona ao arquivo param.in novas opções para colisões e ejeções
+c usando encontros próximos.
+c
+c------------------------------------------------------------------------------
+c
+c 16/05/16
+c ##E12,n## Erros encontrados por dcarrera e ajm.
+c
+c------------------------------------------------------------------------------
+c
+c 08/06/16
+c ##E13,n## Corrige o erro para que seja guardada a distância real do corpo e
+c não a distância de ejeção quando há ejeções no sistema.
+c
+c------------------------------------------------------------------------------
+c
+c 28/06/16
+c ##E14,n## Corrige o erro para que seja adicionado o tempo extra de interrupção
+c da integração corretamente no momento exato que acontece uma colisão ou ejeção.
+c
+c------------------------------------------------------------------------------
+c
+c 08/07/16
+c ##A23,n## Faz com que sejam gravados no arquivo ce.out os dados de cabeçalho
+c (subrotina mce_header) referentes a todos os corpos do sistema e NÃO apenas
+c dos corpos envolvidos em situações de encontros próximos, colisões e ejeções.
+c
+c------------------------------------------------------------------------------
+c
+c 20/07/16
+c ##A24,n## Adiciona ao arquivo param.in a opção de salvar encontros próximos,
+c colisões e ejeções após um critério.
+c
+c------------------------------------------------------------------------------
+c
+c 06/09/16
+c ##A25,n## Implementa os métodos Ray-casting e do Tetraedro para saber se um
+c ponto está fora ou dentro de um poliedro.
+c
+c------------------------------------------------------------------------------
+c
+c 07/09/16
+c ##A26,n## Implementa a opção das coordenadas de entrada no referencial girante.
+c
+c------------------------------------------------------------------------------
+c
+c 21/09/16
+c ##EAN15,n## Corrige o erro para quando vscal(k)=0 ou xscal(k)=0 nas subrotinas
+c mdt_bs1 e mdt_bs2. As implementações foram feitas por A. Amarante e
+c N. C. S. Araújo.
+c
+c------------------------------------------------------------------------------
+c
+c 22/09/16
+c ##ANEO27,n## Implementa o integrador hibrído para o Gauss-Radau. As implementações
+c foram feitas por A. Amarante, N. C. S. Araújo, E. V. Neto e O. C. Winter.
+c
+c------------------------------------------------------------------------------
+c
+c 23/09/16
+c ##EAN16,n## Corrige o erro para que o Mercury pule linhas em branco na
+c leitura de arquivos de entrada. As implementações foram feitas por
+c A. Amarante e N. C. S. Araújo.
+c
+c------------------------------------------------------------------------------
+c
+c 24/09/16
+c ##AN28,n## Faz com que as constantes do arquivo mercury.inc sejam lidas a partir
+c de um arquivo permitindo que o Mercury não tenha que ser compilado toda vez que
+c uma dessas constantes seja alterada. As implementações foram feitas por
+c A. Amarante e N. C. S. Araújo.
+c
+c------------------------------------------------------------------------------
+c
+c 11/10/16
+c ##ANO29,n## Implementa o algoritmo da seção de Poincaré e expoente de Lyapunov.
+c As implementações foram feitas por A. Amarante, N. C. S. Araújo e O. C. Winter.
+c
+c------------------------------------------------------------------------------
+c
+c 14/10/16
+c ##E17,n## Corrige o erro na escrita para quando a energia en(1) ou o momento
+c angular am(1) inicial do sistema for igual a zero.
+c
+c------------------------------------------------------------------------------
+c
+c 14/10/16
+c ##A30,n## Imprime as informações do erro da energia e do momento angular do
+c sistema no arquivo infocpu.out.
+c
+c------------------------------------------------------------------------------
+c
+c 18/10/16
+c ##A31,n## Força o passo dos integradores de passo variável a ter também o
+c o mesmo passo dos integradores de passo constante.
+c
+c------------------------------------------------------------------------------
+c
+c 20/10/16
+c ##A32,n## Implementa as equações para o decaimento/aumento da massa e do
+c período de rotação do asteroide no decorrer do tempo.
+c
+c------------------------------------------------------------------------------
+c
+c 22/10/16
+c ##E18,n## Corrige o erro para que não seja computada colisões fictícias em um
+c mesmo intervalo de tempo.
+c
+c------------------------------------------------------------------------------
+c
+c 04/11/16
+c ##A33,n## Implementa o local da superfície do corpo central que o corpo colidiu.
+c OBS: para o potencial de um asteroide.
+c
+c------------------------------------------------------------------------------
+c
+c 14/01/17
+c ##A34,n## Implementa um anel de ejeção ao redor de corpos escolhidos do sistema.
+c
+c------------------------------------------------------------------------------
+c
+c 16/01/17
+c ##A35,n## Adiciona um vetor de índices dos corpos.
+c
+c------------------------------------------------------------------------------
+c
+c 17/01/17
+c ##A36,n## Implementa colisões para o integrador MVS.
+c
+c------------------------------------------------------------------------------
+c
+c 17/01/17
+c ##A37,n## Colisões com o corpo central opcional.
+c
+c------------------------------------------------------------------------------
+c
+c 20/01/17
+c ##E19,n## Corrige o erro da distância máxima do sistema rmax. Coloca uma
+c distância máxima igual a 10*rmax nas variáveis de output do Mercury. E também
+c coloca uma distância mínima igual a 0.1*rcen quando é usado o potencial de um
+c asteroide.
+c
+c------------------------------------------------------------------------------
+c
+c 22/04/17
+c ##A38,n## Implementa a força de Pressão de Radiação Solar (SRP) e o arrasto de
+c Poynting-Robertson (P-R).
+c
+c------------------------------------------------------------------------------
+c
+c 25/05/17
+c ##A39,n## Implementa o problema de Chariklo.
+c
+c------------------------------------------------------------------------------
+c
+c 15/06/17
+c ##A40,n## Implementa uma esfera de ejeção ao redor de corpos escolhidos do
+c sistema.
+c
+c------------------------------------------------------------------------------
+c
+c 07/10/17
+c ##A41,n## Implementa o método de mascons cúbicos.
+c
+c------------------------------------------------------------------------------
+c
+c 01/08/18
+c ##A42,n## Implementa a conversão de elementos geométricos para coordenadas
+c cartesianas.
+c
+c------------------------------------------------------------------------------
+c
+c 11/11/19
+c ##A43,n## Implementa o critério de colisão com o corpo central para asteroides
+c usando o Laplaciano.
+c
+c------------------------------------------------------------------------------
