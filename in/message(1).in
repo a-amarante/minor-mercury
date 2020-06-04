@@ -1,0 +1,460 @@
+  1  6  days 
+  2  6  years
+  3 13  solar masses
+  4  3  AU
+  5  3 no 
+  6  3 yes
+  7  3 low
+  8  6 medium
+  9  4 high
+ 10  0 
+ 11 33            Integration parameters
+ 12 33            ----------------------
+ 13 14    Algorithm:
+ 14 38 Second-order mixed-variable symplectic
+ 15 24 Bulirsch-Stoer (general)
+ 16 37 Bulirsch-Stoer (conservative systems)
+ 17 16 15th-order RADAU
+ 18 36 Hybrid symplectic (SABP coordinates)
+ 19 34 Hybrid 15th-order RADAU integrator
+ 20  0 
+ 21  0 
+ 22  5 Test
+ 23 48 Hybrid symplectic integrator (mixed coordinates)
+ 24 44 Hybrid symplectic (close binary coordinates)
+ 25 43 Hybrid symplectic (wide binary coordinates)
+ 26 32    Integration start epoch:
+ 27 32    Integration stop  epoch:
+ 28 32    Output interval:
+ 29 32    Element origin:
+ 30 31    Initial timestep:
+ 31 36    Accuracy parameter:
+ 32 36    Central mass:
+ 33 36    J_2:
+ 34 36    J_4:
+ 35 36    J_6:
+ 36 36    Maximum Ejection distance:
+ 37 36    Radius of central body:
+ 38 29    Number of Big bodies:
+ 39 29    Number of Small bodies:
+ 40 37    Output precision: 
+ 41 40    Includes collisions:
+ 42 40    Includes fragmentation: 
+ 43 36    Minimum Ejection distance:
+ 44 68    stop integration by the number of bodies: 
+ 45 40    Includes relativity: 
+ 46 40    Includes user-defined force routine: 
+ 47 10 barycentre 
+ 48 12 central body
+ 49 68    stop integration by accretion of mass of a body: 
+ 50 68    stop integration by decreasing mass of the system: 
+ 51 30            Integration details
+ 52 30            -------------------
+ 53 29    Initial energy:
+ 54 29    Initial angular momentum:
+ 55 65    Integrating massive bodies and particles up to the same epoch.
+ 56 34    Beginning the main integration.
+ 57 24    Integration complete.
+ 58 48    Fractional energy change due to integrator: 
+ 59 48    Fractional angular momentum change:
+ 60 57    Fractional energy change due to collisions/ejections: 
+ 61 57    Fractional angular momentum change:
+ 62 47    Continuing integration from dump files at 
+ 63  6 Time: 
+ 64  6 Date: 
+ 65  9    dE/E: 
+ 66  9    dL/L: 
+ 67 35  collided with the central body at 
+ 68 12  ejected at 
+ 69 12  was hit by 
+ 70 34  removed due to an encounter with 
+ 71  4  at 
+ 72 26  solar masses AU^2 day^-2
+ 73 26  solar masses AU^2 day^-1
+ 74 36  lost mass due to rotational breakup
+ 75 24  removed due to small a
+ 76 35  collided due to an encounter with 
+ 77  0 
+ 78  0 
+ 79  0 
+ 80  0 
+ 81  8  ERROR:
+ 82 49        Modify mercury.inc and recompile Mercury.
+ 83 62        Check the file containing initial data for Big bodies.
+ 84 64        Check the file containing initial data for Small bodies.
+ 85 57        Check the file containing integration parameters.
+ 86 22        Check files.in
+ 87 27 This file already exists:  
+ 88 34 This file is needed to continue:  
+ 89 30 This filename is duplicated: 
+ 90 40 The total number of bodies exceeds NMAX.
+ 91 71 Data style must be Cartesian, Asteroidal or Cometary for this object:
+ 92 68 You cannot integrate non-gravitational forces using this algorithm.
+ 93 64 You cannot integrate a user-defined force using this algorithm.
+ 94 64 You cannot integrate massive Small bodies using this algorithm.
+ 95 66 Massive Small bodies must have the same epoch as the Big bodies.
+ 96 49 Check character implies input file is corrupted.
+ 97 62 Mass, density, encounter limit must be >= 0 for this object:
+ 98 46 This integration algorithm is not available: 
+ 99 50 A problem occurred reading the parameter on line
+100 50 A problem occurred reading data for this object: 
+101 56 A problem occured reading the epoch for the Big bodies.
+102 67 You cannot use non-zero J2,J4,J6 using the close-binary algorithm.
+103 34 Two objects both have this name: 
+104 39         is corrupted at column number: 
+105 42 Central-body radius exceeds maximum radius. 
+106 68 Maximum/Central radius is large. Output precision will be degraded. 
+107 64 Coordinate origin must be Central, Barycentric, Jacobi, Synodic,
+108 69 Type of decompression must be Close Encounter, Collision, Ejection or
+109 34  Collision with the Central Body.
+110  5 Code 
+111 61 selected in Output Format is invalid. See the file close.in.
+112 63 selected in Output Format is invalid. See the file element.in.
+113 68 selected in Sort Output Format is invalid. See the file element.in.
+114 62 You cannot use non-zero J2,J4,J6 using the S(AB)-P algorithm.
+115 47 Orbital sequence is incorrect for this object: 
+116 25 This object there isn't: 
+117 44 The total number of centroids exceeds nocen.
+118 44 The total number of vertices exceeds novmax.
+119 41 The total number of faces exceeds nopmax.
+120 32  Wid, Clo, Uclo, Sabp and Usabp.
+121 10  WARNING:
+122 53 Truncating the name of this object to 8 characters: 
+123 30 Main integration is backwards.
+124 26 No Big bodies are present.
+125 28 No Small bodies are present.
+126 69 Stopping integration due to an close encounter or collision between 
+127 45 Throwing this object into the central body: 
+128 42 Setting output threshhold DA to infinity.
+129 42 Setting output threshhold DE to infinity.
+130 42 Setting output threshhold DI to infinity.
+131 43 Increasing the radius of the central body.
+132 56 Total number of current close encounters exceeds CMAX.
+133 48 Stopping integration because the secondary body 
+134 44  collided with another body of greater mass.
+135 46 Stopping integration by the number of bodies: 
+136 53 Stopping integration by accretion of mass of a body: 
+137 55 Stopping integration by decreasing mass of the system: 
+138 16 The output file 
+139 40           does not exist! Creating it...
+140 58  Recommended relationship between field width 'W' and the
+141 58 number of fractional digits 'D' in Output Format is "W>=D+
+142 40 Stopping integration due to an ejection 
+143 56 Data style must be Inertial or Rotating for this object:
+144 42        Check the file containing vertices.
+145 39        Check the file containing faces.
+146 43 Vertice 0 found! Must be start at 1. Line: 
+147 59 Delta less than zero! Try to change Jacobi Constant. Body: 
+148 52 P.S.S. exceeded maximum number of iterations. Body: 
+149 39 Bad accuracy of Jacobi Constant. Body: 
+150 76 Data style must be Rotating to use Asteroid potential with Jacobi Constant. 
+151 67 )O+_05 Integration parameters  (WARNING: Do not delete this line!!)
+152 66 )O+_05 Big-body initial data  (WARNING: Do not delete this line!!)
+153 68 )O+_05 Small-body initial data  (WARNING: Do not delete this line!!)
+154 39 ) Lines beginning with `)' are ignored.
+155 70 )---------------------------------------------------------------------
+156 43  style (Cartesian, Asteroidal, Cometary) = 
+157 20  epoch (in days) = 
+158 35 ) Important integration parameters:
+159 77  algorithm (MVS, BS, BS2, RAD, HYB, HYBRAD, CLO, WID, SABP, POL, MAS, AST) = 
+160 21  start time (days) = 
+161 20  stop time (days) = 
+162 26  output interval (days) = 
+163 19  timestep (days) = 
+164 22  accuracy parameter = 
+165 22 ) Integration options:
+166 67  stop integration after a close encounter, collision or ejection = 
+167 29  allow collisions to occur = 
+168 37  include collisional fragmentation = 
+169 33  express time in days or years = 
+170 51  express time relative to integration start time = 
+171 20  output precision = 
+172 24  < Not used at present > 
+173 37  include relativity in integration = 
+174 30  include user-defined force = 
+175 52 ) These parameters do not need to be adjusted often:
+176 34  maximum ejection distance (AU) = 
+177 31  radius of central body (AU) = 
+178 31  central mass (solar masses) = 
+179 14  central J2 = 
+180 14  central J4 = 
+181 14  central J6 = 
+182 24  < Not used at present > 
+183 24  < Not used at present > 
+184 45  Hybrid integrator changeover (Hill radii) = 
+185 42  number of timesteps between data dumps = 
+186 48  number of timesteps between periodic effects = 
+187 41  origin (Central, Barycentric, Jacobi) = 
+188 49  collision's test limit with central body (AU) = 
+189 41  maximum number to flush (file ce.out) = 
+190 34  minimum ejection distance (AU) = 
+191 61   range of index of bodies that don't experience ejections = 
+192 55  range of index of bodies that save close encounters = 
+193 79  use chaotic region as a ejection region of system (only coorbitals systems) = 
+194 44  stop integration by the number of bodies = 
+195 59  how many bodies in the system (except the central body) = 
+196 51  stop integration by accretion of mass of a body = 
+197 37  maximum mass limit (solar masses) = 
+198 73  range of index of bodies that don't experience the maximum mass limit = 
+199 53  stop integration by decreasing mass of the system = 
+200 37  minimum mass limit (solar masses) = 
+201 73  range of index of bodies that don't experience the minimum mass limit = 
+202 30 additional stop time (days) = 
+203 24  dump interval (days) = 
+204 21  Reading output file 
+205 32  Process completed successfully!
+206 20  Opening files from 
+207  4  to 
+208 30    Dump interval:
+209 68    use chaotic region as a ejection region of system: 
+210 68    stop integration after a close encounter, collision or ejection: 
+211 58 ) coordinates of central body (for ba and sy coordinates):
+212 73   type of elements of the big and small bodies (ce, ba, Ja, sy, clo, wid,
+213 27  uclo, sabp, usabp, geo) = 
+214 17   central name = 
+215 61   average mean motion n (degrees/years) for sy coordinates = 
+216 47  use system length unit for close encounters = 
+217 22  number of vertices = 
+218 19  number of faces = 
+219 68  layers' densities (g/cm^3) List from most superficial to deepest = 
+220 26  rotation period (days) = 
+221 63  Polyhedron integrator changeover (newtonian potential) (AU) = 
+222 51  Polyhedron integrator changeover (mascons) (AU) = 
+223  9  a (AU)= 
+224  9  b (AU)= 
+225  9  c (AU)= 
+226 10  factor = 
+227 43  use high accuracy for polyhedron method = 
+228 57  use close encounters as collisions (Prune collisions) = 
+229 80 range of index of bodies that experience close encounters as collisions = 
+230 55  use close encounters as ejections (Prune ejections) = 
+231 74  range of index of bodies that experience close encounters as ejections = 
+232  1 ,
+233  1 )
+234  1 (
+235 26  Center of mass (c.o.m.)=  
+236 39  Inertia tensor with origin at c.o.m. :
+237 22  Polyhedron's mass  = 
+238 22  Volumetric radius  = 
+239 22  Polyhedron's volume= 
+240 13 Eigenvalues: 
+241 58  Normalized Eigenvectors (in columns) - transposed matrix:
+242 21 CubicCoeffs[3,2,1,0]=
+243 33 CubicRoots:  negative determinant
+244  7 lox,lo=
+245  7 hix,hi=
+246 37 VolIntBinSearchCubicRoot:  Bad inputs
+247 51 VolIntBinSearchCubicRoot:  exceeded 1000 iterations
+248 45 Cannot solve for eigenvectors; probably X,Y,Z
+249 49  Normalized Eigenvectors in Lat & WLon (degrees):
+250 26 W   (Lat, WLon in degrees)
+251 60  Principal moments of inertia (normalized by the body mass):
+252 35  Equivalent Ellipsoid (a x b x c): 
+253  3  x 
+254 37  Main gravity coefficients (C20,C22):
+255 30  Mass-distribution parameter: 
+256  7  C20 = 
+257  7  C22 = 
+258 15  Inertia axes: 
+259 22 ) Polyhedron's options
+260 34  use potential from binary file = 
+261 15  x-size (AU) = 
+262 15  y-size (AU) = 
+263 15  z-size (AU) = 
+264 35 ) Path of the potential input files
+265 34  List the potential input files = 
+266 29  initial grid point x (AU) = 
+267 27  final grid point x (AU) = 
+268 29  initial grid point y (AU) = 
+269 27  final grid point y (AU) = 
+270 29  initial grid point z (AU) = 
+271 27  final grid point z (AU) = 
+272 48  Hybrid Polyhedron integrator changeover (AU) = 
+273 26    Elapsed Total CPU Time=
+274 21    Elapsed Dump File=
+275  9    real: 
+276  9    user: 
+277  9    sys : 
+278  1 d
+279  1 h
+280  1 m 
+281  1 s
+282 18    Time remaining: 
+283 28    Maximum Size of outfile: 
+284 20    Size of outfile: 
+285  6 bytes 
+286  3 -> 
+287 0 
+288 0 
+289 0 
+290 68    use system length unit for close encounters: 
+291 68    Prune collisions: 
+292 68    Prune ejections: 
+293 68    range: 
+294 68    number of bodies (except central body): 
+295 68    mass limit: 
+296 68    additional time: 
+297 0 
+298 0 
+299 0 
+300 35 Polyhedron Bulirsch-Stoer (general)
+301 31 Mascon Bulirsch-Stoer (general)
+302 30 Mixed Bulirsch-Stoer (general)
+303 48 Polyhedron Bulirsch-Stoer (conservative systems)
+304 44 Mascon Bulirsch-Stoer (conservative systems)
+305 43 Mixed Bulirsch-Stoer (conservative systems)
+306 27 Polyhedron 15th-order RADAU
+307 23 Mascon 15th-order RADAU
+308 22 Mixed 15th-order RADAU
+309 28 Polyhedron Hybrid symplectic
+310 45 Polyhedron Hybrid 15th-order RADAU integrator
+311 0 
+312 0 
+313 0 
+314 0 
+315 76 ) Start to save close encounters, collisions and ejections after a criteria 
+316 17  time criteria = 
+317 15 time (days) = 
+318 22  body mass criteria = 
+319 29  maximum body mass (solar) = 
+320 72  range of index of bodies that don't experience the maximum body mass = 
+321 24  system mass criteria = 
+322 31  minimum system mass (solar) = 
+323 74  range of index of bodies that don't experience the minimum system mass = 
+324 29  number of bodies criteria = 
+325 50  minimum number of bodies (except central body) = 
+326 60 Starting to save close encounters, collisions and ejections 
+327 16 (time criteria) 
+328 21 (body mass criteria) 
+329 23 (system mass criteria) 
+330 28 (number of bodies criteria) 
+331 33  use point inside a polyhedron = 
+332 64  Gaussian gravitational constant squared K2 (AU^3/day^2/MSUN) = 
+333 22  Distance unit (cm) = 
+334 17  Mass unit (g) = 
+335 31   use forced Stepsize (HVAR) = 
+336 57 Starting to shrink/increase masses, rotation period, etc 
+337 0 
+338 0 
+339 0 
+340 40 The total number of x potential points exceeds nopotx.
+341 40 The total number of y potential points exceeds nopoty.
+342 40 The total number of z potential points exceeds nopotz.
+343 0 
+344 0 
+345 0 
+346 0 
+347 0 
+348 0 
+349 0 
+350 0 
+351 68    time criteria: 
+352 68    time (days): 
+353 68    body mass criteria: 
+354 68    system mass criteria: 
+355 68    number of bodies criteria: 
+356 36    Central name: 
+357 36    type of elements: 
+358 36    average mean motion (deg/yrs): 
+359 36    Hybrid changeover (Hill radii): 
+360 36    rotation period (days): 
+361 36    Newtonian changeover: 
+362 36    Mascon changeover: 
+363 36    a: 
+364 36    b: 
+365 36    c: 
+366 36    Point inside polyhedron: 
+367 36    Fudge factor: 
+368 36    high accuracy poly method: 
+369 36    potential from bin file: 
+370 23  Number of vertices  = 
+371 23  Number of faces     = 
+372 23  Number of centroids = 
+373 37  Poincare Surface Section (P.S.S.) = 
+374 45  Lyapunov Characteristic Exponent (L.C.E.) = 
+375 39  use initial Jacobi Constant instead = 
+376 33  Initial Jacobi Constant value = 
+377 44  Renormalisation interval (L.C.E.) (days) = 
+378 46 which coordinate do you want to use (u,v,w) = 
+379 52 which sign of coordinate do you want to use (+/-) = 
+380 42  Equation of cross plane (ax+by+cz+d=0) = 
+381 28  Jacobi Constant accuracy = 
+382 22  accuracy of method = 
+383 41 maximum number of iterations of method = 
+384 38  initial x/vx displacement (L.C.E.) = 
+385 50  range of index of bodies that don't make P.S.S = 
+386 38  initial y/vy displacement (L.C.E.) = 
+387 38  initial z/vz displacement (L.C.E.) = 
+388 50  range of index of bodies that don't make L.C.E = 
+389 28  use conservation of mass = 
+390 46    Maximum relative error of Jacobi Constant: 
+391 36    criteria: 
+392 26  shrink/increase masses = 
+393 25  exponential parameter = 
+394 35  shrink/increase rotation period = 
+395 36    shrink/increase masses: 
+396 36    exponential parameter: 
+397 36    shrink/increase rotation period: 
+398 71  range of index of bodies that experience it (central body included) = 
+399 75  range of index of bodies that deliver lost mass (central body included) = 
+400 36    use forced stepsize (HVAR): 
+401 69    layers' densities (g/cm^3) List from most superficial to deepest: 
+402 36    Hyb pol changeover (Hill radii): 
+403 36    Poincare Surface Section: 
+404 36    Initial Jacobi Constant value: 
+405 36   Lyapunov Characteristic Exponent: 
+406 36    initial x/vx displacement: 
+407 36    initial y/vy displacement: 
+408 36    initial z/vz displacement: 
+409 60  criteria (1=time/2=bodymass/3=systemmass/4=numberbodies) = 
+410 36    use conservation of mass: 
+411 36    use conservation of momentum:
+412 40  use conservation of angular momentum = 
+413 59  use final mass instead (0 to use exponential parameter) = 
+414 70  use final rotation period instead (0 to use exponential parameter) = 
+415 36    use final mass instead: 
+416 36    use final rot period instead: 
+417 50   rotate asteroid (integrate on inertial frame) = 
+418 36    rotate asteroid: 
+419 29   Prune ejection by a ring = 
+420 36    Prune ejection by a ring: 
+421 10   index = 
+422 36    index: 
+423 33  prune ring width (Hill radii) = 
+424 36    ring width (Hill radii): 
+425 68   use system length unit instead Hill radii for prune ring/sphere = 
+426 36    system length unit instead: 
+427 22  ejected by a ring at 
+428 47  allow collisions with central body to occur = 
+429 40    allow collisions with central body: 
+430 40    obliquity of central body (degrees): 
+431 39  obliquity of central body (degrees) = 
+432 40    sun mean motion (degrees/days): 
+433 34  sun mean motion (degrees/days) = 
+434 40    sun mass (solar): 
+435 20  sun mass (solar) = 
+436 63   range of index of bodies that don't experience SRP and P-R = 
+437 35   cylindrical shadow radius (AU) = 
+438 40    cylindrical shadow radius (AU): 
+439 29   speed of light (AU/days) = 
+440 40    speed of light (AU/days): 
+441 38   stop integration after a criteria = 
+442 40    stop integration after a criteria: 
+443 27   use Chariklo's problem = 
+444 40    use Chariklo's problem: 
+445 21  delta radius (AU) = 
+446 42  close encounter output interval (days) = 
+447 35  close encounter stepsize (days) = 
+448 31   Prune ejection by a sphere = 
+449 28  use cubic mascons method = 
+450 0 
+451 20  Doesn't converge to
+452 12  iterations.
+453 45  Semi-major axis is less than to zero. Body: 
+454 0 
+455 0 
+456 49  use Laplacian central body collision criteria = 
+457 0 
+458 0 
+459 0 
+460 0 
