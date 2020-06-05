@@ -27,7 +27,7 @@ Output (``element.in`` and ``close.in`` files):
 - the user can sort output data by any tag of the output format.
 - the output data can be written using ``state*.dat`` files style, instead traditional ``*.aei`` one.
 - this version also appends in ``ce.out`` file the informations about collisions between the bodies, ejections of the system, collisions with central body, prune collisions, prune ejections, and the Poincare Surface Section. The user can manage these options through ``close.in`` file.
-- the output data is written in a single ASCII characters line (subroutines ``mio_out.for``, ``mio_re2c2.for``, ``mio_c2re2.for`` and ``mio_c2fl2,for``), which significantly decreases the size of the output files ``xv.out`` and ``ce.out``.
+- the output data is written in a single ASCII characters line (subroutines ``mio_out.for``, ``mio_re2c2.for``, ``mio_c2re2.for`` and ``mio_c2fl2.for``), which significantly decreases the size of the output files ``xv.out`` and ``ce.out``.
 - in addition, an extra summary ``infocpu.out`` file of the computational integration process, that shows remaining integration time, overall CPU % usage, among others.
 
 Parameters (``param.in`` file):
