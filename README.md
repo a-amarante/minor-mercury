@@ -152,7 +152,8 @@ These are adaptations that I made into original Mercury code through the years (
 
 The changes were made through labels ##Am,n## and the corrections of the bugs through labels ##Em,n##.
 
-c Please send your comments to a.amarante.br@gmail.com or andre.amarante@unesp.br.
+Please send your comments to a.amarante.br@gmail.com or andre.amarante@unesp.br.
+
 c 26/11/13
 c ##E1,n## Corrige o erro para adicionar parâmetros de forças
 c não-gravitacionais nos dados de entrada dos corpos nos arquivos big.in e
