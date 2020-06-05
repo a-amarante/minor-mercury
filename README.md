@@ -128,7 +128,7 @@ Disclaimers
 ------------
 
 * The minor version changes have only been tested with the ``MAS`` and ``POL`` algorithms to integrate particle orbits around the irregular gravity field of an asteroid. Use other integrators at your own risk.
-* I've fixed all the errors I've found, such as De Souza Torres & Anderson (2008) bug fix (see, e.g., [Mercury Adaptations and some bugs](#mercury-adaptations-and-some-bugs)).  If you find a bug, let me know so we can try to fix it.
+* I've fixed all the errors I've found, such as De Souza Torres & Anderson (2008) bug fix (see, e.g., [Mercury Adaptations and some bugs fixed](#mercury-adaptations-and-some-bugs-fixed)).  If you find a bug, let me know so we can try to fix it.
 * Any feedback is appreciated, especially bugs, suggestions, or possible contributions.
 * Are you going to publish? Please acknowledge the use of my code in any publication referencing:
 
@@ -145,8 +145,8 @@ The code was used in the following recent studies:
 * G. O. Barbosa, O. C. Winter, A. Amarante, A. Izidoro, R. C. Domingos, E. E. N. Macau (2020), Earth-size planet formation in the habitable zone of circumbinary stars. MNRAS.
 * T. S. Moura, O. C. Winter, A. Amarante, R. Sfair, G. Borderes-Motta, G. Valvano (2019), Dynamical environment and surface characteristics of asteroid (16) Psyche. MNRAS.
 
-#Mercury Adaptation and some bugs
---------------------
+#Mercury Adaptations and some bugs fixed
+----------------------------------------
 
 These are adaptations that I made into original Mercury code through the years (in Brazilian Portuguese):
 
