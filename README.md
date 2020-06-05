@@ -1,11 +1,44 @@
 Minor-Mercury Package
 ===============================
 A version to handle Asteroids and Comets.
----------------------------------
+-----------------------------------------
 
 ``Minor-Mercury package`` is an N-body code which allows the user to performer N-body numerical integrations in the irregular gravitational field around a minor body, such an Asteroid and a Comet. It is based on the [original Mercury code](https://github.com/a-amarante/mercury) from Chambers (1999) and works in the same way. Note that minor bodies simulations only work with the ``Bulirsch-Stoer`` algorithm integrator of original Mercury (``mdt_bs1.for`` subroutine). If you don't know how original Mercury works, I invite you to download the original one and read ``mercury6.man``.
 
-The Minor-Mercury version can also work for either ``single stars`` (central), ``binary stars`` (close/wide) and ``triple stars`` (S(AB)-P) (see, e.g., Barbosa et al. (2020) and Amarante et al. (2020)). The ``Solar Radiation Pressure`` (Mignard, 1984) can also take into account over numerical integration time (subroutine ``mfo_pr.for``). This version uses a slightly different input/output formats from the original package. For example, the user can place the initial conditions of the bodies around any body of the system and not only around central one (same for output data), for the inertial or the rotating reference frames (same for output data), choosing asteroidal or cartesian coordinates styles for each body separately. The input/output ``Geometric Elements`` computational conversions (Renner and Sicardy, 2006) were also implemented in this version (subroutines ``geo_car.for`` and ``car_geo.for``). A full explanation of all inputs and outputs is given in ``mercury6.man``.
+The Minor-Mercury version can also work for either ``single stars`` (central -> Chambers, 1999), ``binary stars`` (close/wide -> Chambers, 2002) and ``triple stars`` (S(AB)-P ->  Verrier and Evans, 2013) (see, e.g., Barbosa et al. (2020) and Amarante et al. (2020)). The ``Solar Radiation Pressure`` (Mignard, 1984) can also take into account over numerical integration time (subroutine ``mfo_pr.for``).
+
+This version uses a slightly different input/output formats from the original package:
+
+Some Minor Version Features
+---------------------------------
+
+Input (``big.in`` and ``small.in`` files):
+
+- for example, the user can place the initial conditions of the bodies around any body of the system and not only around central one.
+- the user can choose between inertial or rotating reference frames.
+- the user can set an asteroidal or a cartesian coordinate style for each body separately.
+- additionally, the input/output ``Geometric Elements`` computational conversions (Renner and Sicardy, 2006; Borderies-Rappaport and Longaretti, 1994) were also implemented in this version (subroutines ``geo_car.for`` and ``car_geo.for``).
+
+Output (``element.in`` and ``close.in`` files):
+
+- the previously input features were also implemented for the output data style.
+- the user can manage the initial and the final output times.
+- there is a possibility to generate an extra body containing the system center of mass coordinates over the integration time.
+- the user can sort output data by any tag of the output format.
+- the output data can be written using ``state*.dat`` files style, instead traditional ``*.aei`` one.
+- this version also appends in ``ce.out`` file the informations about collisions between the bodies, ejections of the system, collisions with central body, prune collisions, prune ejections, and the Poincare Surface Section. The user can manage these options through ``close.in`` file.
+- in addition, the output data is written in a single ASCII characters line (subroutines ``mio_out.for``, ``mio_re2c2.for``, ``mio_c2re2.for`` and ``mio_c2fl2``), which significantly decreases the size of the output files ``xv.out`` and ``ce.out``.
+
+Parameters (``param.in`` file):
+
+- added the option of the minimum ejection distance.
+- choice of bodies that will not be ejected from the system.
+- choice of bodies that will not be experiment a close encounter, which significantly decreases the size of the output file ``ce.out``.
+- for example, stop integration by the number of remaining bodies, among others.
+- dump interval.
+- Solar Radiation Perturbation options.
+
+A full explanation of all inputs and outputs is given in ``mercury6.man``.
 
 N.B. I've implemented a modified version of the original POLYHEDRON code from D. Tsoulis into the Minor-Mercury package, that can compute the gravitational potential, and its first and second derivatives of a homogenous polyhedron, according to Petrovic (J of G, 1996). The main gravitational implementations were made in the subroutines ``mfo_all.for`` and ``mfo_grav.for`` through subroutine ``polyhedron.for``. Additionally, mascons approach was also implemented into this subroutine.
 
@@ -94,7 +127,7 @@ Disclaimers
 ------------
 
 * The minor version changes have only been tested with the ``MAS`` and ``POL`` algorithms to integrate particle orbits around the irregular gravity field of an asteroid. Use other integrators at your own risk.
-* I've fixed all the errors I've found, such as De Souza Torres & Anderson (2008) bug fix (see, e.g., [Mercury Adaptations](#mercury-adaptations)).  If you find a bug, let me know so we can try to fix it.
+* I've fixed all the errors I've found, such as De Souza Torres & Anderson (2008) bug fix (see, e.g., [Mercury Adaptations and some bugs](#mercury-adaptations-and-some-bugs)).  If you find a bug, let me know so we can try to fix it.
 * Any feedback is appreciated, especially bugs, suggestions, or possible contributions.
 * Are you going to publish? Please acknowledge the use of my code in any publication referencing:
 
@@ -111,11 +144,14 @@ The code was used in the following recent studies:
 * G. O. Barbosa, O. C. Winter, A. Amarante, A. Izidoro, R. C. Domingos, E. E. N. Macau (2020), Earth-size planet formation in the habitable zone of circumbinary stars. MNRAS.
 * T. S. Moura, O. C. Winter, A. Amarante, R. Sfair, G. Borderes-Motta, G. Valvano (2019), Dynamical environment and surface characteristics of asteroid (16) Psyche. MNRAS.
 
-#Mercury Adaptations
+#Mercury Adaptation and some bugs
 --------------------
 
-These are adaptations that I made into original Mercury code through the years (in Portuguese):
+These are adaptations that I made into original Mercury code through the years (in Brazilian Portuguese):
 
+The changes were made through labels ##Am,n## and the corrections of the bugs through labels ##Em,n##.
+
+c Please send your comments to a.amarante.br@gmail.com or andre.amarante@unesp.br.
 c 26/11/13
 c ##E1,n## Corrige o erro para adicionar parâmetros de forças
 c não-gravitacionais nos dados de entrada dos corpos nos arquivos big.in e
