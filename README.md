@@ -127,7 +127,7 @@ Unfortunately, the code needs to be recompiled any time parameters in the ``merc
 Disclaimers
 ------------
 
-* The minor version changes have only been tested with the ``MAS`` and ``POL`` algorithms to integrate particle orbits around the irregular gravity field of an asteroid. Use other integrators at your own risk.
+* The minor body integrators of this version have only been tested for ``MAS`` and ``POL`` algorithms to integrate particle orbits around the irregular gravity field of an asteroid. Use other integrators of this type at your own risk. The previously integrators from Original Mercury code worked fine.
 * I've fixed all the errors I've found, such as De Souza Torres & Anderson (2008) bug fix (see, e.g., [Mercury Adaptations and some bugs fixed](#mercury-adaptations-and-some-bugs-fixed)).  If you find a bug, let me know so we can try to fix it.
 * Any feedback is appreciated, especially bugs, suggestions, or possible contributions.
 * Are you going to publish? Please acknowledge the use of my code in any publication referencing:
