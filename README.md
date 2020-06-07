@@ -5,7 +5,7 @@ A version to handle Asteroids and Comets.
 
 ``Minor-Mercury package`` is an N-body code which allows the user to performer N-body numerical integrations in the irregular gravitational field around a minor body, such an Asteroid and a Comet. It is based on the [original Mercury code](https://github.com/a-amarante/mercury) from Chambers (1999) and works in the same way. Note that minor bodies simulations only work with the ``Bulirsch-Stoer`` algorithm integrator of original Mercury (``mdt_bs1.for`` subroutine). If you don't know how original Mercury works, I invite you to download the original one and read ``mercury6.man``.
 
-The Minor-Mercury version can also work for either ``single stars`` (central -> Chambers, 1999), ``binary stars`` (close/wide -> Chambers et al., 2002) and ``triple stars`` (S(AB)-P ->  Verrier and Evans, 2013) (see, e.g., Barbosa et al. (2020) and Amarante et al. (2020)). The ``Solar Radiation Pressure`` (Mignard, 1984) can also take into account over numerical integration time (subroutine ``mfo_pr.for``).
+The Minor-Mercury version can also work for either ``single stars`` (central -> Chambers, 1999), ``binary stars`` (close/wide -> Chambers et al., 2002) and ``triple stars`` (S(AB)-P ->  Verrier and Evans, 2013) (see, e.g., Barbosa et al. (2020) and Amarante et al. (2020)). The ``Solar Radiation Pressure`` (Burns et al., 1979; Mignard, 1984) can also take into account over numerical integration time (subroutine ``mfo_pr.for``).
 
 This version uses a slightly different input/output formats from the original package:
 
@@ -27,6 +27,7 @@ Output (``element.in`` and ``close.in`` files):
 - the user can sort output data by any tag of the output format.
 - the output data can be written using ``state*.dat`` files style (organized through output interval files), instead traditional ``*.aei`` one (organized through body files).
 - this version also appends in ``ce.out`` file the informations about collisions between the bodies, ejections of the system, collisions with central body, prune collisions, prune ejections, and the Poincare Surface Section. The user can manage these options through ``close.in`` file.
+- for minor body integrations, the subroutine ``mce_cent.for`` appends the exact facet locations, where the collisions with the central polyhedric triangular mesh occurs.
 - the output data is written in a single ASCII characters line (subroutines ``mio_out.for``, ``mio_re2c2.for``, ``mio_c2re2.for`` and ``mio_c2fl2.for``), which significantly decreases the size of the output files ``xv.out`` and ``ce.out``.
 - in addition, an extra summary ``infocpu.out`` file of the computational integration process, that shows remaining integration time, overall CPU % usage, among others.
 
