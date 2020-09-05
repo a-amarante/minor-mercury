@@ -42,7 +42,7 @@ Parameters (``param.in`` file):
 
 A full explanation of all inputs and outputs is given in ``mercury6.man``.
 
-N.B. I've implemented a modified version of the original POLYHEDRON code from D. Tsoulis into the Minor-Mercury package, that can compute the gravitational potential, and its first and second derivatives of a homogenous polyhedron, according to Petrovic (J of G, 1996). The main gravitational implementations were made in the subroutines ``mfo_all.for`` and ``mfo_grav.for`` through subroutine ``polyhedron.for``. Additionally, mascons approach was also implemented into this subroutine.
+N.B. I've implemented a modified version of the original POLYHEDRON code from D. Tsoulis into the Minor-Mercury package, that can compute the gravitational potential, and its first and second derivatives of a homogenous polyhedron, according to Petrovic (J of G, 1996). The main gravitational implementations were made in the subroutines ``mfo_all.for`` and ``mfo_grav.for`` through subroutine ``polyhedron.for``. Additionally, mascons approach (Geissler et al., 1996) was also implemented into this subroutine.
 
 Notable contents of this repository
 ---------------------------
@@ -123,7 +123,7 @@ Or use the executable files ``minor-mercury_gfort`` or ``minor-mercury_ifort`` f
 Tricks and Caveats
 ------------------
 
-Unfortunately, the code needs to be recompiled any time parameters in the ``mercury.inc`` and ``swift.inc`` files get changed.
+Unfortunately, the code needs to be recompiled any time parameters in the ``mercury.inc`` and ``swift.inc`` files get changed. However, these parameters do not need to be adjusted often or almost never.
 
 Disclaimers
 ------------
