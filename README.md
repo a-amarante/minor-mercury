@@ -135,6 +135,7 @@ Disclaimers
 
    ``Amarante, A., Winter, O. C., Sfair, R. (2020), Stability and Evolution of Fallen Particles Around the Surface of Asteroid (101955) Bennu. JGR Planets.``
 
+* The code also has a Zenodo DOI number that can be used for citation: [https://doi.org/10.5281/zenodo.4015759](https://doi.org/10.5281/zenodo.4015759)
 * The source codes of this repository are available on reasonable request.
 
 Recent Publications
@@ -144,6 +145,7 @@ The code was used in the following recent studies:
 
 * Amarante, A., Winter, O. C., Sfair, R. (2020), Stability and Evolution of Fallen Particles Around the Surface of Asteroid (101955) Bennu. JGR Planets.
 * G. O. Barbosa, O. C. Winter, A. Amarante, A. Izidoro, R. C. Domingos, E. E. N. Macau (2020), Earth-size planet formation in the habitable zone of circumbinary stars. MNRAS.
+* O. C. Winter, G. Valvano, T. S. Moura, G. Borderes-Motta, A. Amarante, R. Sfair (2020), Asteroid triple-system 2001 SN263: surface characteristics and dynamical environment. MNRAS.
 * T. S. Moura, O. C. Winter, A. Amarante, R. Sfair, G. Borderes-Motta, G. Valvano (2019), Dynamical environment and surface characteristics of asteroid (16) Psyche. MNRAS.
 
 #Mercury Adaptations and some bugs fixed
