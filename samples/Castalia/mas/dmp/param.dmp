@@ -1,0 +1,177 @@
+)O+_05 Integration parameters  (WARNING: Do not delete this line!!)
+) Lines beginning with `)' are ignored.
+)---------------------------------------------------------------------
+) Important integration parameters:
+)---------------------------------------------------------------------
+ algorithm (MVS, BS, BS2, RAD, HYB, HYBRAD, CLO, WID, SABP, POL, MAS, AST) = MAS
+  start time (days) =    0.0000000000000000     
+  stop time (days) =    72000.000000000000     
+  output interval (days) =    360.00000000000000     
+  dump interval (days) =    360.00000000000000     
+  timestep (days) =    8.0000000000000000     
+  accuracy parameter =    9.9999999999999998E-013
+  use forced Stepsize (HVAR) = no 
+  rotate asteroid (integrate on inertial frame) = no 
+ use cubic mascons method = yes
+)---------------------------------------------------------------------
+) Integration options:
+)---------------------------------------------------------------------
+ stop integration after a close encounter, collision or ejection = no 
+ range of index of bodies that save close encounters =       0 -       0
+ use system length unit for close encounters = no 
+ use close encounters as collisions (Prune collisions) = no 
+range of index of bodies that experience close encounters as collisions =             1 -       1
+ use close encounters as ejections (Prune ejections) = no 
+ range of index of bodies that experience close encounters as ejections =       1 -       0
+ stop integration by the number of bodies = no 
+ how many bodies in the system (except the central body) =       2
+ stop integration by accretion of mass of a body = no 
+ maximum mass limit (solar masses) =  3.227156000000000E-07
+ range of index of bodies that don't experience the maximum mass limit =       0 -       0
+ stop integration by decreasing mass of the system = no 
+ minimum mass limit (solar masses) =  3.003490000000000E-06
+ range of index of bodies that don't experience the minimum mass limit =       1 -       3
+ additional stop time (days) =    0.0000000000000000     
+)---------------------------------------------------------------------
+) Start to save close encounters, collisions and ejections after a criteria 
+ time criteria = no 
+ time (days) =     365.25000000000000     
+ body mass criteria = no 
+ maximum body mass (solar) =  3.227156000000000E-07
+ range of index of bodies that don't experience the maximum body mass =       1 -       1
+ system mass criteria = no 
+ minimum system mass (solar) =  3.003490000000000E-06
+ range of index of bodies that don't experience the minimum system mass =       0 -       0
+ number of bodies criteria = no 
+ minimum number of bodies (except central body) =       2
+)---------------------------------------------------------------------
+ allow collisions to occur = no 
+ include collisional fragmentation = no 
+ allow collisions with central body to occur = yes
+ express time in days or years =  days 
+ express time relative to integration start time = yes
+ output precision = high
+ use chaotic region as a ejection region of system (only coorbitals systems) = no 
+ include relativity in integration = no 
+ include user-defined force = no 
+ include rotational breakup = no 
+)---------------------------------------------------------------------
+  obliquity of central body (degrees) =    0.0000000000000000     
+  sun mean motion (degrees/days) =    9.5064263442086793E-006
+  sun mass (solar) =    1.9890999999999999E+030
+   speed of light (AU/days) =    299792.19744272198     
+  range of index of bodies that don't experience SRP and P-R =       0 -       0
+   cylindrical shadow radius (AU) =  -0.28999999999999998     
+)---------------------------------------------------------------------
+  use Chariklo's problem = no 
+  delta radius (AU) =   0.10000000000000001     
+  close encounter output interval (days) =    1.0000000000000000E-003
+  close encounter stepsize (days) =    1.0000000000000000E-004
+)---------------------------------------------------------------------
+) These parameters do not need to be adjusted often:
+)---------------------------------------------------------------------
+  collision's test limit with central body (AU) =    250.00000000000000     
+  maximum number to flush (file ce.out) =          100
+  minimum ejection distance (AU) =    0.0000000000000000     
+  maximum ejection distance (AU) =    10.000000000000000     
+  range of index of bodies that don't experience ejections =       0 -       0
+  Prune ejection by a ring = no 
+  index =       1
+  prune ring width (Hill radii) =    3.0000000000000000     
+  Prune ejection by a sphere = no 
+  index =       0 -      -2
+  use system length unit instead Hill radii for prune ring/sphere = no 
+  central name = CASTALIA
+  radius of central body (AU) =   0.10000000000000001     
+  central mass (solar masses) =    1402415371807.6670     
+  central J2 =    0.0000000000000000     
+  central J4 =    0.0000000000000000     
+  central J6 =    0.0000000000000000     
+) coordinates of central body (for ba and sy coordinates):
+  car
+  0.000000000000000E+00  0.000000000000000E+00  0.000000000000000E+00
+  0.000000000000000E+00  0.000000000000000E+00  0.000000000000000E+00
+  type of elements of the big and small bodies (ce, ba, Ja, sy, clo, wid, uclo, sabp, usabp, geo) =   Cen
+range of index of bodies to apply geometric elements =       0 -       0
+  average mean motion n (degrees/years) for sy coordinates =  3.600000000000000E+02
+  Hybrid integrator changeover (Hill radii) =    3.0000000000000000     
+  number of timesteps between periodic effects =          100
+)---------------------------------------------------------------------
+) Polyhedron's options
+)---------------------------------------------------------------------
+ layers' densities (g/cm^3) List from most superficial to deepest =   2.100000000000000E+00
+ rotation period (days) =  1.465200000000000E+04
+ Polyhedron integrator changeover (newtonian potential) (AU) =  1.000000000000000E+02
+ Polyhedron integrator changeover (mascons) (AU) =  9.000000000000000E-01
+ Hybrid Polyhedron integrator changeover (AU) =  4.000000000000000E+02
+ a (AU)=  8.999999999999999E-01
+ b (AU)=  8.999999999999999E-01
+ c (AU)=  8.999999999999999E-01
+ use point inside a polyhedron = yes
+ factor =  1.000000000000000E+00
+ use high accuracy for polyhedron method = no 
+ use Laplacian central body collision criteria = no 
+)---------------------------------------------------------------------
+ use potential from binary file = yes
+ x-size (AU) =  5.900000000000000E-01
+ y-size (AU) =  5.900000000000000E-01
+ z-size (AU) =  5.900000000000000E-01
+)---------------------------------------------------------------------
+) Path of the potential input files
+ ./in/                                                                           
+)---------------------------------------------------------------------
+ List the potential input files =  cube.in                                                                         
+)---------------------------------------------------------------------
+ initial grid point x (AU) = -3.995000000000000E+02
+ final grid point x (AU) =  3.995000000000000E+02
+ initial grid point y (AU) = -3.995000000000000E+02
+ final grid point y (AU) =  3.995000000000000E+02
+ initial grid point z (AU) = -3.995000000000000E+02
+ final grid point z (AU) =  3.995000000000000E+02
+)---------------------------------------------------------------------
+ Gaussian gravitational constant squared K2 (AU^3/day^2/MSUN) =  6.674280000000000E-20
+ Distance unit (cm) =  1.000000000000000E+05
+ Mass unit (g) =  1.000000000000000E+03
+)---------------------------------------------------------------------
+ Poincare Surface Section (P.S.S.) = no 
+ range of index of bodies that don't make P.S.S =       0 -       0
+ Lyapunov Characteristic Exponent (L.C.E.) = no 
+ range of index of bodies that don't make L.C.E =       0 -       0
+ initial x/vx displacement (L.C.E.) =  1.000000000000000E-08
+ initial y/vy displacement (L.C.E.) =  1.000000000000000E-08
+ initial z/vz displacement (L.C.E.) =  0.000000000000000E+00
+ Renormalisation interval (L.C.E.) (days) =  3.600000000000000E+03
+ use initial Jacobi Constant instead = no 
+ Initial Jacobi Constant value = -2.500000000000000E-08
+ which coordinate do you want to use (u,v,w) = v
+ which sign of coordinate do you want to use (+/-) = +
+ Equation of cross plane (ax+by+cz+d=0) =   1.000000000000000E+00  0.000000000000000E+00  0.000000000000000E+00  0.000000000000000E+00
+ accuracy of method =  1.000000000000000E-12
+ maximum number of iterations of method =          100
+ Jacobi Constant accuracy =  0.000000000000000E+00
+)---------------------------------------------------------------------
+ time criteria = no 
+time (days) =    3.652500000000000E+02  3.652500000000000E+03
+ body mass criteria = no 
+ maximum body mass (solar) =   3.227156000000000E-07  3.227156000000000E-06
+ range of index of bodies that don't experience the maximum body mass =       1 -       1
+ system mass criteria = no 
+ minimum system mass (solar) =   3.003490000000000E-06  3.003490000000000E-07
+ range of index of bodies that don't experience the minimum system mass =       0 -       0
+ number of bodies criteria = no 
+ minimum number of bodies (except central body) =       10       5
+  stop integration after a criteria = no 
+)---------------------------------------------------------------------
+ shrink/increase masses = no 
+ exponential parameter = -1.000000000000000E+00
+ use final mass instead (0 to use exponential parameter) =  3.003490000000000E-07
+ range of index of bodies that experience it (central body included) =       1 -       1
+  criteria (1=time/2=bodymass/3=systemmass/4=numberbodies) =            0
+ use conservation of mass = no 
+ range of index of bodies that deliver lost mass (central body included) =       1 -       1
+ shrink/increase rotation period = no 
+ exponential parameter =  1.000000000000000E+00
+ use final rotation period instead (0 to use exponential parameter) =  1.800000000000000E+04
+  criteria (1=time/2=bodymass/3=systemmass/4=numberbodies) =            0
+ use conservation of angular momentum = no 
+)---------------------------------------------------------------------

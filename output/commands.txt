@@ -1,0 +1,5 @@
+rm -rf *.aei *.out *.dat
+gfortran car_geo.for freq_n0.for moyen_mouvement.for element-minor.for -o element-minor
+./element-minor
+#gfortran car_geo.for freq_n0.for moyen_mouvement.for close-minor.for -o close-minor
+#./close-minor
