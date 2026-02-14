@@ -1,0 +1,5 @@
+rm -rf *.aei *.out *.dat
+chmod +x element-minor
+./element-minor
+#chmod +x close-minor
+#./close-minor

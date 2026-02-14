@@ -1,0 +1,181 @@
+
+ Number of vertices  =    2048
+ Number of faces     =    4092
+ Number of centroids =    5341
+ Polyhedron's volume=  6.676250000000148E-01
+ Volumetric radius  =  5.421856088292646E-01
+ Polyhedron's mass  =  1.402415371807667E+12
+ Center of mass (c.o.m.)= ( 0.000000000000000E+00, 0.000000000000000E+00, 0.000000000000000E+00)
+ Inertia tensor with origin at c.o.m. :
+  1.111263968993225E+11  0.000000000000000E+00  0.000000000000000E+00
+  0.000000000000000E+00  2.689321248028411E+11  0.000000000000000E+00
+  0.000000000000000E+00  0.000000000000000E+00  2.869206610360021E+11
+ Principal moments of inertia (normalized by the body mass):
+  7.923928896763606E-02  1.917635318387850E-01  2.045903566118010E-01
+ Main gravity coefficients (C20,C22):
+ C20 = -6.908894620859045E-02 C22 =  2.813106071778725E-02
+ Mass-distribution parameter:  8.976727919906710E-01
+ Eigenvalues: 
+        1.1112639689932254028320312E+11 (    0.0000000000000000000000000E+00)
+        2.6893212480284008789062500E+11 (    1.1529215046068469760000000E+18)
+        2.8692066103600262451171875E+11 (    0.0000000000000000000000000E+00)
+ Eigenvec 1 sol'n:  -4.577636718750E-05  0.000000000000E+00  0.000000000000E+00
+ Eigenvec 2 sol'n:   0.000000000000E+00  1.007080078125E-03  0.000000000000E+00
+ Eigenvec 3 sol'n:   0.000000000000E+00  0.000000000000E+00 -5.493164062500E-04
+ Normalized Eigenvectors (in columns):                    
+  1.000000000000000E+00 -0.000000000000000E+00  0.000000000000000E+00
+  0.000000000000000E+00  1.000000000000000E+00  0.000000000000000E+00
+ -0.000000000000000E+00 -0.000000000000000E+00  1.000000000000000E+00
+ Normalized Eigenvectors in Lat & WLon (degrees):
+        -0.000000         0.000000W   (Lat, WLon in degrees)
+        -0.000000        90.000000W   (Lat, WLon in degrees)
+        90.000000         0.000000W   (Lat, WLon in degrees)
+ Equivalent Ellipsoid (a x b x c):  8.903855899032589E-01 x  4.797554422324284E-01 x  4.074692141580116E-01
+ Inertia axes: 
+  0.000000000000000E+00  0.000000000000000E+00  0.000000000000000E+00
+  1.058872354617906E-01  3.074165074582941E-02  2.217568111099084E-02
+  0.000000000000000E+00  0.000000000000000E+00  0.000000000000000E+00
+
+           Integration parameters
+           ----------------------
+
+   Algorithm: Mascon Bulirsch-Stoer (general)
+
+   Integration start epoch:               0.0000000 days 
+   Integration stop  epoch:           72000.0000000
+   Output interval:                     360.000
+   Dump interval:                     360.000
+   use forced stepsize (HVAR):      no 
+   rotate asteroid:                 no 
+   Output precision:                 high
+
+   Initial timestep:                8.000 days 
+   Accuracy parameter:              1.0000E-12
+   Central mass:                    1.4024E+12 solar masses
+   Central name:                    CASTALIA
+   J_2:                              0.0000E+00
+   J_4:                              0.0000E+00
+   J_6:                              0.0000E+00
+   Minimum Ejection distance:       0.0000E+00 AU
+   Maximum Ejection distance:       1.0000E+01 AU
+   range:                                                                 0 -       0
+   Prune ejection by a ring:        no 
+   index:                                 1
+   ring width (Hill radii):         3.0000E+00
+   system length unit instead:      no 
+   Radius of central body:          1.0000E-01 AU
+   type of elements:                  Cen
+   average mean motion (deg/yrs):   3.6000E+02
+   Hybrid changeover (Hill radii):  3.0000E+00
+
+   Includes collisions:                 no 
+   Includes fragmentation:              no 
+   allow collisions with central body:  yes
+   Includes relativity:                 no 
+   Includes user-defined force routine: no 
+   obliquity of central body (degrees): 3.0997E+00
+   sun mean motion (degrees/days):      1.6592E-07
+   sun mass (solar):                    1.9891E+30
+   speed of light (AU/days):            2.9979E+05
+   range:                                                                 0 -       0
+   cylindrical shadow radius (AU):      -2.9000E-01
+   use Chariklo's problem:              no 
+
+   stop integration after a close encounter, collision or ejection: no 
+   use system length unit for close encounters:                     no 
+   Prune collisions:                                                no 
+   range:                                                                 1 -       1
+   Prune ejections:                                                 no 
+   range:                                                                 1 -       0
+   stop integration by the number of bodies:                        no 
+   number of bodies (except central body):                                2
+   stop integration by accretion of mass of a body:                 no 
+   mass limit:                                                      3.2272E-07 solar masses
+   range:                                                                 0 -       0
+   stop integration by decreasing mass of the system:               no 
+   mass limit:                                                      3.0035E-06 solar masses
+   range:                                                                 1 -       3
+   additional time:                                                 0.0000E+00 days 
+   use chaotic region as a ejection region of system:               no 
+   time criteria:                                                   no 
+   time (days):                                                             365.2500000
+   body mass criteria:                                              no 
+   mass limit:                                                      3.2272E-07 solar masses
+   range:                                                                 1 -       1
+   system mass criteria:                                            no 
+   mass limit:                                                      3.0035E-06 solar masses
+   range:                                                                 0 -       0
+   number of bodies criteria:                                       no 
+   number of bodies (except central body):                                2
+
+   layers' densities (g/cm^3) List from most superficial to deepest:   2.100000000000000E+00
+   rotation period (days):           1.4652E+04
+   Newtonian changeover:            1.0000E+02 AU
+   Mascon changeover:               9.0000E-01 AU
+   Hyb pol changeover (Hill radii): 4.0000E+02 AU
+   a:                               9.0000E-01 AU
+   b:                               9.0000E-01 AU
+   c:                               9.0000E-01 AU
+   Point inside polyhedron:         yes
+   Fudge factor:                    1.0000E+00
+   high accuracy poly method:       no 
+   potential from bin file:         yes
+
+   Poincare Surface Section:        no 
+   range:                                                                 0 -       0
+   Initial Jacobi Constant value:   -2.5000E-08
+  Lyapunov Characteristic Exponent: no 
+   range:                                                                 0 -       0
+
+   time criteria:                                                   no 
+   time (days):                                                            3.6525000E+02       3.6525000E+03
+   body mass criteria:                                              no 
+   mass limit:                                                       3.2272E-07 3.2272E-06 solar masses
+   range:                                                                 1 -       1
+   system mass criteria:                                            no 
+   mass limit:                                                       3.0035E-06 3.0035E-07 solar masses
+   range:                                                                 0 -       0
+   number of bodies criteria:                                       no 
+   number of bodies (except central body):                                10       5
+   stop integration after a criteria:   no 
+   shrink/increase masses:          no 
+   exponential parameter:           -1.0000E+00
+   use final mass instead:           3.0035E-07
+   range:                                                                 1 -       1
+   criteria:                              0
+   use conservation of mass:        no 
+   range:                                                                 1 -       1
+   shrink/increase rotation period: no 
+   exponential parameter:            1.0000E+00
+   use final rot period instead:     1.8000E+04
+   criteria:                              0
+   use conservation of momentum:    no 
+
+   Number of Big bodies:     0
+   Number of Small bodies:   1
+
+
+           Integration details
+           -------------------
+
+   Initial energy:            2.69720E+04 solar masses AU^2 day^-2 
+   Initial angular momentum:  1.23040E+08 solar masses AU^2 day^-1 
+
+   Integrating massive bodies and particles up to the same epoch.
+
+   Beginning the main integration.
+
+   14 February  2026   2:49:33.371 PM      
+   Maximum Size of outfile:           10366 bytes -> ./out/xv.out                                                                    
+200.145.13.100 2801:88:fe6::a50 127.0.1.1 andre 
+
+   Integration complete.
+
+   Fractional energy change due to integrator:   0.00000E+00
+   Fractional angular momentum change:           0.00000E+00
+
+   Fractional energy change due to collisions/ejections:  0.00000E+00
+   Fractional angular momentum change:                    0.00000E+00
+
+   Maximum relative error of Jacobi Constant:  0.00000E+00
+   14 February  2026   2:49:36.381 PM      

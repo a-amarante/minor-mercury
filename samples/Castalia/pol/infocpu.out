@@ -1,0 +1,15 @@
+   Elapsed Dump File=
+   real:     0d 0h 0m 0.003s
+   user:     0d 0h 0m 0.003s
+   sys :     0d 0h 0m 0.000s
+   Elapsed Total CPU Time=
+   real:     0d 0h 0m30.759s
+   user:     0d 0h 0m30.649s
+   sys :     0d 0h 0m 0.110s
+   Time remaining:    0d 0h 0m 0.000s
+   Size of outfile: 
+12006 bytes -> ./out/xv.out
+158 bytes -> ./out/ce.out
+%CPU %MEM     TIME     ELAPSED  START     PID COMMAND         S  NI EUSER
+93.1  0.1 00:00:30       00:33  14:48   28920 minor-mercury   S   0 andre
+ Time:        72000.0 days    dE/E:  0.00000E+00   dL/L:  0.00000E+00

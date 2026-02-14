@@ -1,0 +1,3 @@
+rm -rf *dmp *.o *.out *out
+chmod +x minor-mercury
+./minor-mercury
