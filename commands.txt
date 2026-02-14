@@ -1,5 +1,0 @@
-rm -rf *dmp *.o *.out *out
-#gfortran command.for dhms.for geo_car.for get_pid.for mfo_user.for moyen_mouvement.for timestamp.for minor-mercury.for -o minor-mercury
-make clean
-make all
-./minor-mercury
